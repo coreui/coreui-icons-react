@@ -1,0 +1,73 @@
+{
+  "name": "@coreui/icons-react",
+  "version": "1.0.0-alpha.0",
+  "description": "CoreUI Icons React component",
+  "license": "MIT",
+  "homepage": "https://coreui.io",
+  "author": {
+    "name": "CoreUI",
+    "url": "https://coreui.io",
+    "github": "https://github.com/coreui",
+    "twitter": "https://twitter.com/core_ui"
+  },
+  "contributors": [
+    {
+      "name": "CoreUI Team",
+      "url": "https://github.com/orgs/coreui/people"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coreui/coreui-icons-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/coreui/coreui-icons-react/issues"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css/",
+    "es/",
+    "lib/",
+    "umd/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component --copy-files --no-demo",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "lint": "eslint src",
+    "link": "npm link @coreui/react"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "core-js": "^3.6.4",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "@coreui/react": "^3.0.0-alpha.1",
+    "react": "^16.12.0"
+  },
+  "devDependencies": {
+    "@coreui/icons": "^1.0.1",
+    "babel-eslint": "^10.0.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.18.3",
+    "nwb": "^0.23.0",
+    "react-app-polyfill": "^1.0.6",
+    "sinon": "^5.1.1"
+  },
+  "keywords": [
+    "coreui",
+    "coreui-icons",
+    "coreui-react",
+    "icons",
+    "svg",
+    "svg-icons",
+    "layout",
+    "component",
+    "react"
+  ]
+}
