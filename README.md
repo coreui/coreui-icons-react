@@ -7,9 +7,40 @@
 [npm]: https://www.npmjs.com/package/@coreui/icons-react
 [npm-download]: https://img.shields.io/npm/dm/@coreui/icons-react.svg?style=flat-square
 
+##### install:
+```bash
+npm install @coreui/react
+npm install @coreui/icons-react
+```
+
+##### import: 
+```jsx
+import { CIcon, CIconRaw } from '@coreui/icons-react';
+import { cifAu } from '@coreui/icons';
+```
+```scss
+@import '~@coreui/icons/css/all.css';
+```
+
+##### usage:
+```jsx
+...
+class CoreUIIcons extends Component {
+...
+render() {
+    return (
+      <CIconRaw name='cifAu' size="2xl"/>
+      <CIcon name="cil-list" size="2xl"/>
+    )
+}
+...
+```
+
+---
+
 - bootstrapped with [nwb](https://github.com/insin/nwb) toolkit
 
-#### `npm run` scripts
+##### `npm run` scripts
 
 `package.json` is configured with `"scripts"` we can use with `npm run` while developing the project.
 
