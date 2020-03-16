@@ -125,10 +125,10 @@ CIconRaw.propTypes = {
   className: PropTypes.string,
   //
   name: PropTypes.string,
-  content: PropTypes.oneOfType([String, Array]),
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   size: PropTypes.oneOf(['custom', 'custom-size', 'sm', 'lg', 'xl',
       '2xl', '3xl', '4xl', '5xl', '6xl', '7xl', '8xl', '9xl']),
-  customClasses: PropTypes.oneOfType([String, Array, Object]),
+  customClasses: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
   src: PropTypes.string,
   title: PropTypes.string,
   use: PropTypes.string
