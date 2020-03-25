@@ -9,7 +9,7 @@
 
 ##### install:
 ```bash
-npm install @coreui/react
+npm install @coreui/icons
 npm install @coreui/icons-react
 ```
 
@@ -18,6 +18,7 @@ npm install @coreui/icons-react
 import { CIcon, CIconRaw } from '@coreui/icons-react';
 import { cifAu } from '@coreui/icons';
 ```
+or:
 ```scss
 @import '~@coreui/icons/css/all.css';
 ```

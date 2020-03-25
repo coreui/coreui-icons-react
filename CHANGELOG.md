@@ -1,5 +1,10 @@
 ### [@coreui/icons-react](https://coreui.io/) changelog
 
+##### `1.0.0-alpha.3`
+- test: add missing tests
+- refactor: cleanup 
+- chore: dependencies update and cleanup
+
 ##### `1.0.0-alpha.0`
 - initial version
 
