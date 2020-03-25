@@ -1,9 +1,7 @@
-import 'react-app-polyfill/ie11'; // For IE 11 support
-import 'react-app-polyfill/stable';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '@coreui/react';
+import { mapToCssModules } from './Shared/helper';
 import CIconRaw from './CIconRaw';
 import style from './CIcon.module.css';
 
@@ -34,7 +32,7 @@ const CIcon = props=>{
     }
   }
 
-  if (type=='svg'){
+  if (type==='svg'){
     return (
       <CIconRaw {...attributes} name={name} size={size} className={className} />
     );
@@ -42,8 +40,8 @@ const CIcon = props=>{
 
   const classes = (classNames(
     mapToCssModules(className, Object.assign(style, cssModule)),
-    type=='name' ? name :
-      type=='class' ? name.className : null,
+    type==='name' ? name :
+      type==='class' ? name.className : null,
     size ? 'c-icon-'+size : null
   ));
 
@@ -51,7 +49,7 @@ const CIcon = props=>{
     <Tag {...attributes} className={classes} />
   );
 
-}
+};
 
 CIcon.propTypes = {
   tag: PropTypes.string,

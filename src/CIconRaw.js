@@ -1,9 +1,7 @@
-import 'react-app-polyfill/ie11'; // For IE 11 support
-import 'react-app-polyfill/stable';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {mapToCssModules, colog} from '@coreui/react';
+import {mapToCssModules, colog} from './Shared/helper';
 import style from './CIcon.module.css';
 
 //component - CoreUI / CIconRaw
@@ -29,12 +27,12 @@ const CIconRaw = props=>{
     return str.replace(/([-_][a-z0-9])/ig, ($1) => {
       return $1.toUpperCase().replace('-', '')
     })
-  }
+  };
 
   //vars
 
   const iconName = (()=>{
-    const iconNameIsKebabCase = name && name.includes('-')
+    const iconNameIsKebabCase = name && name.includes('-');
     return iconNameIsKebabCase ? toCamelCase(name) : name
   })();
   const titleCode = (()=>{
@@ -62,7 +60,7 @@ const CIconRaw = props=>{
     return attributes.viewBox || `0 0 ${scale}`
   })();
   const computedSize = (()=>{
-    const addCustom = !size && (attributes.width || attributes.height)
+    const addCustom = !size && (attributes.width || attributes.height);
     return size === 'custom' || addCustom ? 'custom-size' : size
   })();
   //console.log(iconName, computedSize)
@@ -86,7 +84,7 @@ const CIconRaw = props=>{
     computedSize ? `c-icon-${computedSize}` : ''
   ), style);
 
-  const classes = customClasses || (class1 + ' ' + class2)
+  const classes = customClasses || (class1 + ' ' + class2);
 
   //console.log(code, viewBox, classes, titleCode+' - '+iconCode);
   //v-html={titleCode+iconCode}
@@ -118,7 +116,7 @@ const CIconRaw = props=>{
     </React.Fragment>
   );
 
-}
+};
 
 CIconRaw.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
