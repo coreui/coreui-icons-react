@@ -13,12 +13,4 @@ describe('CIcon', () => {
     expect(render(<CIcon size={'xl'}></CIcon>))
     .toContain(' c-icon-xl')
   })
-  it('renders <i> with name object', () => {
-    expect(render(<CIcon name={{name: 'test', type: 'class', className: 'c-icon'}} size={'sm'}></CIcon>))
-    .toContain('<i class="c-icon c-icon-sm"></i>')
-  })
-  it('renders <span> with name object', () => {
-    expect(render(<CIcon tag={'span'} name={{name: 'test', type: 'class', className: 'c-icon'}} size={'lg'}></CIcon>))
-    .toContain('<span class="c-icon c-icon-lg"></span>')
-  })
 })
