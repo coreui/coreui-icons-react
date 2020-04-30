@@ -1,6 +1,6 @@
 {
   "name": "@coreui/icons-react",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "CoreUI Icons React component",
   "license": "MIT",
   "homepage": "https://coreui.io",
@@ -26,7 +26,6 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
-    "css/",
     "es/",
     "lib/",
     "umd/",
@@ -44,7 +43,6 @@
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "@coreui/icons": "^1.0.1",
     "react": "^16.13.1"
   },
   "devDependencies": {
