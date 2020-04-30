@@ -12,8 +12,9 @@ const mapToCssModules = (className = '', cssModule = globalCssModule) => {
 export {mapToCssModules};
 
 export function colog() {
-  if (process.env.NODE_ENV === 'development')
+  if (process && process.env && process.env.NODE_ENV === 'development') {
     console.log.apply(this, arguments);
+  }
 }
 
 
