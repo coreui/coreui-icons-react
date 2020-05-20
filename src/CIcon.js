@@ -1,7 +1,7 @@
 import React from 'react'
 import CIconRaw from './CIconRaw'
-import style from './CIcon.module.css'
+import './CIcon.css'
 
 //component - CoreUI / CIcon
-const CIcon = props => <CIconRaw {...props} cssModule={style}/>
+const CIcon = props => <CIconRaw {...props}/>
 export default CIcon

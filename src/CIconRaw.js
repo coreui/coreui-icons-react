@@ -1,7 +1,12 @@
 import React, { useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { mapToCssModules, colog } from './Shared/helper'
+
+const colog = () => {
+  if (process && process.env && process.env.NODE_ENV === 'development') {
+    console.log.apply(this, arguments);
+  }
+}
 
 const toCamelCase = (str) => {
   return str.replace(/([-_][a-z0-9])/ig, ($1) => {
@@ -14,7 +19,6 @@ const CIconRaw = props => {
 
   const {
     className,
-    cssModule,
     //
     name,
     content,
@@ -64,11 +68,11 @@ const CIconRaw = props => {
   })()
 
   //render
-  const computedClasses = mapToCssModules(classNames(
+  const computedClasses = classNames(
     'c-icon',
     computedSize && `c-icon-${computedSize}`,
     className
-  ), cssModule)
+  )
 
   const classes = customClasses || computedClasses
 
@@ -108,7 +112,6 @@ const CIconRaw = props => {
 
 CIconRaw.propTypes = {
   className: PropTypes.string,
-  cssModule: PropTypes.object,
   //
   name: PropTypes.string,
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
