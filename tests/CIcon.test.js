@@ -6,11 +6,11 @@ import {CIcon} from 'src/'
 
 describe('CIcon', () => {
   it('renders svg with class="c-icon"', () => {
-    expect(render(<CIcon></CIcon>))
+    expect(render(<CIcon/>))
     .toContain('class="c-icon')
   })
   it('renders svg with class="c-icon-xl"', () => {
-    expect(render(<CIcon size={'xl'}></CIcon>))
+    expect(render(<CIcon size={'xl'}/>))
     .toContain(' c-icon-xl')
   })
 })

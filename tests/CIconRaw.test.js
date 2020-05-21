@@ -8,39 +8,39 @@ React.icons = {logo, cilLogo};
 
 describe('CIconRaw', () => {
   it('renders svg with class="c-icon"', () => {
-    expect(render(<CIconRaw></CIconRaw>))
+    expect(render(<CIconRaw/>))
     .toContain('class="c-icon')
   })
   it('renders svg with name', () => {
-    expect(render(<CIconRaw name='logo'></CIconRaw>))
+    expect(render(<CIconRaw name='logo'/>))
     .toContain(logo[1])
   })
   it('renders svg with name and className', () => {
-    expect(render(<CIconRaw name={'logo'} className='test'></CIconRaw>))
+    expect(render(<CIconRaw name={'logo'} className='test'/>))
     .toContain(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${logo[0]}" class="c-icon test" role="img">${logo[1]}</svg>`)
   })
   it('renders svg with content', () => {
-    expect(render(<CIconRaw content='content'></CIconRaw>))
+    expect(render(<CIconRaw content='content'/>))
     .toContain('role="img">content</svg>')
   })
   it('renders svg with size', () => {
-    expect(render(<CIconRaw size='xl'></CIconRaw>))
+    expect(render(<CIconRaw size='xl'/>))
     .toContain('c-icon-xl')
   })
   it('renders svg with custom size', () => {
-    expect(render(<CIconRaw size='custom'></CIconRaw>))
+    expect(render(<CIconRaw size='custom'/>))
     .toContain('c-icon-custom-size')
   })
   it('renders svg with className', () => {
-    expect(render(<CIconRaw className='c-icon-test'></CIconRaw>))
+    expect(render(<CIconRaw className='c-icon-test'/>))
     .toContain('c-icon-test')
   })
   it('renders <img> with src', () => {
-    expect(render(<CIconRaw src='src'></CIconRaw>))
+    expect(render(<CIconRaw src='src'/>))
     .toContain('<img src="src" role="img"/>')
   })
   it('renders <svg> with <use>', () => {
-    expect(render(<CIconRaw use='xxx'></CIconRaw>))
+    expect(render(<CIconRaw use='xxx'/>))
     .toContain('<use href="xxx"></use></svg>')
   })
 })

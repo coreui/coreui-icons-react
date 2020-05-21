@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 const colog = () => {
   if (process && process.env && process.env.NODE_ENV === 'development') {
-    console.log.apply(this, arguments);
+    console.log.apply(this);
   }
 }
 

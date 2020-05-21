@@ -1,2 +1,3 @@
 import './CIcon.css'
-export { default as CIcon } from './CIconRaw' 
+import CIcon from './CIconRaw'
+export default CIcon
