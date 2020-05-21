@@ -1,6 +1,6 @@
 {
   "name": "@coreui/icons-react",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-beta.1",
   "description": "CoreUI Icons React component",
   "sideEffects": "src/CIcon.css",
   "license": "MIT",
