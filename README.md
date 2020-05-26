@@ -47,12 +47,12 @@ render() {
 
 Command | Description |
 --- | ---
-`npm start` | start a development server for the demo app
-`npm test` | run tests
-`npm run test:coverage` | run tests and produce a code coverage report in `coverage/`
-`npm run test:watch` | start a test server and re-run tests on every change
 `npm run build` | prepare for publishing to npm
 `npm run clean` | delete built resources
+`npm test` | run tests
+`npm run test:coverage` | run tests and produce a code coverage report in `coverage/`
+<del>`npm run test:watch`</del> | n/a ~~start a test server and re-run tests on every change~~
+<del>`npm start`</del> | n/a ~~start a development server for the demo app~~
 
 #### see also:
 - [Developing React Components and Libraries with nwb](https://github.com/insin/nwb/blob/master/docs/guides/ReactComponents.md#developing-react-components-and-libraries-with-nwb)
