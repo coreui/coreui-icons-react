@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface CIconRaw {
   className?: string
   name?: string
@@ -13,5 +11,5 @@ interface CIconRaw {
 
 interface CIcon extends CIconRaw {}
 
-export declare const CIconRaw: (props: CIconRaw) => React.SFC<CIconRaw>;
-export declare const CIcon: (props: CIcon) => React.SFC<CIcon>;
+export declare const CIconRaw: (props: CIconRaw) => any;
+export declare const CIcon: (props: CIcon) => any;
