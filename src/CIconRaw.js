@@ -2,9 +2,9 @@ import React, { useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-const colog = () => {
+const colog = (...args) => {
   if (process && process.env && process.env.NODE_ENV === 'development') {
-    console.log.apply(this);
+    console.log(...args)
   }
 }
 
