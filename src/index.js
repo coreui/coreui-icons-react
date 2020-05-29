@@ -1,2 +1,8 @@
-export {default as CIcon} from './CIcon'
-export {default as CIconRaw} from './CIconRaw'
+import {default as CIcon, CIconWarn} from './CIcon'
+
+export default CIcon 
+
+export {
+  CIconWarn as CIcon,
+  CIconWarn as CIconRaw
+}

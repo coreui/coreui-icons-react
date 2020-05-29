@@ -1,4 +1,4 @@
-interface CIconRaw {
+interface CIcon {
   className?: string
   name?: string
   content?: string | Array<string>
@@ -9,7 +9,4 @@ interface CIconRaw {
   use?: string
 }
 
-interface CIcon extends CIconRaw {}
-
-export declare const CIconRaw: (props: CIconRaw) => any;
-export declare const CIcon: (props: CIcon) => any;
+export declare const CIcon: (props: CIcon) => any
