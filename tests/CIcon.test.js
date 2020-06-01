@@ -3,10 +3,16 @@ import React from 'react'
 import { renderToStaticMarkup as render } from 'react-dom/server'
 
 import CIcon from 'src/'
+import CIconRaw from 'src/'
 import {logo, logo as cilLogo} from './logo'
-React.icons = { logo, cilLogo }
+import { cifAU } from './cif-AU';
+React.icons = { logo, cilLogo, cifAU }
 
 describe('CIcon', () => {
+
+  // polyfill 
+  String.prototype.replaceAll = function(f,r){return this.split(f).join(r);}
+
   it('renders svg with class="c-icon"', () => {
     expect(render(<CIcon/>))
     .toContain('class="c-icon')
@@ -42,5 +48,25 @@ describe('CIcon', () => {
   it('renders <svg> with <use>', () => {
     expect(render(<CIcon use='xxx'/>))
     .toContain('<use href="xxx"></use></svg>')
+  })
+  it('renders with title', () => {
+    expect(render(<CIcon name="cifAU" title="title"/>))
+    .toContain(cifAU[1])
+  })
+  it('warns on CIconRaw', () => {
+    expect(render(<CIconRaw/>))
+    .toContain('c-icon')
+  })
+  it('doesn`t warn on existing icon', () => {
+    expect(render(<CIcon name='cifAU'/>))
+    .toNotContain('undefined')
+  })
+  it('warns on non existing icon', () => {
+    expect(render(<CIcon name='none'/>))
+    .toContain('undefined')
+  })
+  it('converts toCamelCase', () => {
+    expect(render(<CIcon name='cif-AU'/>))
+    .toContain(cifAU[1])
   })
 })
