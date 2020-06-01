@@ -10,3 +10,5 @@ interface CIcon {
 }
 
 export declare const CIcon: (props: CIcon) => any
+
+export default (props: CIcon) => any
