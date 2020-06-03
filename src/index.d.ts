@@ -1,4 +1,7 @@
-interface CIcon {
+import { HTMLProps } from 'react'
+type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+
+interface CIcon extends Omit<HTMLProps<any>, 'content' | 'size'> {
   className?: string
   name?: string
   content?: string | Array<string>
@@ -9,6 +12,7 @@ interface CIcon {
   use?: string
 }
 
-export declare const CIcon: (props: CIcon) => any
+declare const CIcon: (props: CIcon) => any
 
-export default (props: CIcon) => any
+export { CIcon }
+export default CIcon
