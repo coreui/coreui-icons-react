@@ -12,7 +12,7 @@ const colog = (...args) => {
 const toCamelCase = (str) => {
   return str.replace(/([-_][a-z0-9])/ig, ($1) => {
     return $1.toUpperCase()
-  }).replaceAll('-', '')
+  }).replace(/-/ig, '')
 }
 
 //component - CoreUI / CIcon
@@ -20,7 +20,6 @@ const CIcon = props => {
 
   const {
     className,
-    //
     name,
     content,
     customClasses,
@@ -113,7 +112,6 @@ const CIcon = props => {
 
 CIcon.propTypes = {
   className: PropTypes.string,
-  //
   name: PropTypes.string,
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   size: PropTypes.oneOf([
