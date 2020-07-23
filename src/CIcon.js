@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import './CIcon.css'
 
-const colog = (...args) => {
-  if (process && process.env && process.env.NODE_ENV === 'development') {
-    console.warn(...args)
+let warned = {}
+const colog = (msg, icon) => {
+  if (!warned[icon] && process && process.env && process.env.NODE_ENV === 'development') {
+    warned[icon] = true
+    console.error(msg)
   }
 }
 
@@ -46,7 +48,11 @@ const CIcon = props => {
       return content
     } else if (name && React.icons) {
       return React.icons[iconName] ? React.icons[iconName] :
-        colog('Not existing icon: '+ iconName + ' in React.icons object')
+        colog(`CIcon component: icon name '${iconName}' does not exist in React.icons object. ` +
+              `To use icons by 'name' prop you need to make them available globally ` + 
+              `by adding them to React.icons object. CIcon component docs: https://coreui.io/react/docs/components/CIcon \n`,
+              iconName
+            )
     }
   }, [change])
 
