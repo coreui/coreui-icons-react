@@ -1,6 +1,6 @@
 {
   "name": "@coreui/icons-react",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "CoreUI Icons React component",
   "license": "MIT",
   "homepage": "https://coreui.io",
@@ -49,15 +49,12 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.21.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.22.0",
     "nwb": "^0.25.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "sinon": "^9.2.4"
+    "react-dom": "^17.0.1"
   },
   "keywords": [
     "coreui",

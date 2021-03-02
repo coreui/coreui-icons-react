@@ -1,5 +1,8 @@
 ### [@coreui/icons-react](https://coreui.io/) changelog
 
+##### `1.1.0`
+- chore: update to React 17 
+
 ##### `1.0.0` - `1.0.3`
 - refactor: improve 'unregistered icon' error message
 - fix: change 'replaceAll' func to 'replace' due to transpilation error
