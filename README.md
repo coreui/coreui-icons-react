@@ -2,13 +2,16 @@
 
 [![npm package][npm-badge]][npm]
 [![NPM downloads][npm-download]][npm]
+![react](https://img.shields.io/badge/react-^16.14.0-lightgrey.svg?style=flat-square&logo=react)
+
 
 [npm-badge]: https://img.shields.io/npm/v/@coreui/icons-react/latest?style=flat-square
 [npm]: https://www.npmjs.com/package/@coreui/icons-react
 [npm-download]: https://img.shields.io/npm/dm/@coreui/icons-react.svg?style=flat-square
 
 ##### docs:
-https://coreui.io/react/docs/components/-Icon
+https://coreui.io/react/docs/components/CIcon
+https://icons.coreui.io/docs/using-coreui-icons-with/react/
 
 ##### install:
 ```bash
