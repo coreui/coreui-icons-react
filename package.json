@@ -45,19 +45,19 @@
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "react": "^16.13.1"
+    "react": "^16.14.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "eslint": "^7.5.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-react": "^7.20.3",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "eslint": "^7.21.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.22.0",
     "nwb": "^0.25.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "sinon": "^9.0.2"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "sinon": "^9.2.4"
   },
   "keywords": [
     "coreui",
