@@ -2,7 +2,7 @@ import React, { HTMLAttributes, FC, useState, useMemo } from 'react'
 import classNames from 'classnames'
 import './CIcon.css'
 
-export interface CIconProps extends HTMLAttributes<SVGSVGElement> {
+export interface CIconProps extends HTMLAttributes< SVGSVGElement | HTMLImageElement > {
   /**
    * A string of all className you want applied to the component. [docs]
    */
@@ -118,8 +118,12 @@ const CIcon: FC<CIconProps> = ({
       className
     )
   }
-
   //const classes =  customClasses || computedClasses
+
+  // let restImg: HTMLAttributes<HTMLImageElement> = {}
+  // if (src && !use) {
+  //   restImg = rest as HTMLAttributes<HTMLImageElement>
+  // }
 
   return (
     <React.Fragment>
@@ -135,6 +139,7 @@ const CIcon: FC<CIconProps> = ({
       }
       { src && !use &&
         <img
+          {...rest}
           className={className}
           src={src}
           role="img"
