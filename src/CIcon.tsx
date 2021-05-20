@@ -1,8 +1,8 @@
-import React, { HTMLAttributes, FC, useState, useMemo } from 'react'
+import React, { DOMAttributes, FC, useState, useMemo } from 'react'
 import classNames from 'classnames'
 import './CIcon.css'
 
-export interface CIconProps extends HTMLAttributes< SVGSVGElement | HTMLImageElement > {
+export interface CIconProps extends DOMAttributes<SVGSVGElement|HTMLImageElement> {
   /**
    * A string of all className you want applied to the component. [docs]
    */
@@ -35,6 +35,8 @@ export interface CIconProps extends HTMLAttributes< SVGSVGElement | HTMLImageEle
    * Title tag content. [docs]
    */
   title?: string
+  width?: string
+  height?: string
 }
 
 let warned = {}
