@@ -17,14 +17,14 @@ export interface CIconProps extends DOMAttributes<SVGSVGElement> {
    */
   content?: string | Array<string>
   /**
-   * Size of the icon. Available sizes: 'sm', 'lg', 'xl', '2xl'...'9xl', 'custom', 'custom-size'. [docs]
+   * Size of the icon. Available sizes: 'sm', 'lg', 'xl', 'xxl', '3xl...9xl', 'custom', 'custom-size'. [docs]
    */
   size?:
     | 'custom-size'
     | 'sm'
     | 'lg'
     | 'xl'
-    | '2xl'
+    | 'xxl'
     | '3xl'
     | '4xl'
     | '5xl'
@@ -146,7 +146,7 @@ CIcon.propTypes = {
     'sm',
     'lg',
     'xl',
-    '2xl',
+    'xxl',
     '3xl',
     '4xl',
     '5xl',
