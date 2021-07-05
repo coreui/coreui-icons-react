@@ -1,4 +1,3 @@
-test/coverage/
-es/
-lib/
-umd/
+{
+  "ignorePatterns": [".eslintrc.js"]
+}
