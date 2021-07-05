@@ -1,4 +1,4 @@
-### [@coreui/icons-react](https://coreui.io/) for [CoreUI for React](https://coreui.io/react/)
+### [@coreui/icons-react](https://icons.coreui.io/) for [CoreUI for React](https://coreui.io/react/)
 
 [![npm package][npm-badge]][npm]
 [![NPM downloads][npm-download]][npm]
@@ -17,6 +17,13 @@
 ```bash
 npm install @coreui/icons
 npm install @coreui/icons-react
+```
+
+or
+
+```bash
+yarn add @coreui/icons
+yarn add @coreui/icons-react
 ```
 
 ##### import: 
@@ -41,23 +48,11 @@ render() {
 }
 ...
 ```
-
----
-
-- bootstrapped with [nwb](https://github.com/insin/nwb) toolkit
-
-##### `npm run` scripts
+##### scripts:
 
 `package.json` is configured with `"scripts"` we can use with `npm run` while developing the project.
 
 Command | Description |
 --- | ---
-`npm run build` | prepare for publishing to npm
-`npm run clean` | delete built resources
-`npm test` | run tests
-`npm run test:coverage` | run tests and produce a code coverage report in `coverage/`
-<del>`npm run test:watch`</del> | n/a ~~start a test server and re-run tests on every change~~
-<del>`npm start`</del> | n/a ~~start a development server for the demo app~~
-
-#### see also:
-- [Developing React Components and Libraries with nwb](https://github.com/insin/nwb/blob/master/docs/guides/ReactComponents.md#developing-react-components-and-libraries-with-nwb)
+`yarn build` | prepare for publishing to npm
+`yarn lint` | run eslint
