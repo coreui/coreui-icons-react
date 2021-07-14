@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
-import React, { DOMAttributes, forwardRef, useState, useMemo } from 'react'
+import React, { DOMAttributes, ImgHTMLAttributes, forwardRef, useState, useMemo } from 'react'
 import classNames from 'classnames'
 import './CIcon.css'
 
-export interface CIconProps extends DOMAttributes<SVGSVGElement> {
+export interface CIconProps extends DOMAttributes<SVGSVGElement>, ImgHTMLAttributes<HTMLImageElement> {
   /**
    * A string of all className you want applied to the component. [docs]
    */
