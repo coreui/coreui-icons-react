@@ -14,9 +14,9 @@ export interface CIconProps extends DOMAttributes<SVGSVGElement> {
      */
     content?: string | Array<string>;
     /**
-     * Size of the icon. Available sizes: 'sm', 'lg', 'xl', '2xl'...'9xl', 'custom', 'custom-size'. [docs]
+     * Size of the icon. Available sizes: 'sm', 'lg', 'xl', 'xxl', '3xl...9xl', 'custom', 'custom-size'. [docs]
      */
-    size?: 'custom-size' | 'sm' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl';
+    size?: 'custom-size' | 'sm' | 'lg' | 'xl' | 'xxl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl';
     /**
      * Use for replacing default CIcon component classes. Prop is overriding the 'size' prop. [docs]
      */

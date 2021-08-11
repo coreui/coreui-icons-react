@@ -11,7 +11,7 @@
   font-size: 1rem;
 }
 
-.icon:not(.icon-c-s):not(.icon-custom-size).icon-2xl {
+.icon:not(.icon-c-s):not(.icon-custom-size).icon-xxl {
   width: 2rem;
   height: 2rem;
   font-size: 2rem;

@@ -2,7 +2,7 @@
 
 [![npm package][npm-badge]][npm]
 [![NPM downloads][npm-download]][npm]
-![react](https://img.shields.io/badge/react-^17.0.1-lightgrey.svg?style=flat-square&logo=react)
+![react](https://img.shields.io/badge/react-^17.0.2-lightgrey.svg?style=flat-square&logo=react)
 
 
 [npm-badge]: https://img.shields.io/npm/v/@coreui/icons-react/latest?style=flat-square
@@ -31,10 +31,6 @@ yarn add @coreui/icons-react
 import { CIcon } from '@coreui/icons-react';
 import { cifAU } from '@coreui/icons';
 ```
-or:
-```scss
-@import '~@coreui/icons/css/all.css';
-```
 
 ##### usage:
 ```jsx
@@ -43,7 +39,7 @@ class CoreUIIcons extends Component {
 ...
 render() {
     return (
-      <CIcon name="cil-list" size="2xl"/>
+      <CIcon name="cil-list" size="xxl"/>
     )
 }
 ...

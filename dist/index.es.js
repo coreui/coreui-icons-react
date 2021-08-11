@@ -1243,7 +1243,7 @@ CIcon.propTypes = {
         'sm',
         'lg',
         'xl',
-        '2xl',
+        'xxl',
         '3xl',
         '4xl',
         '5xl',
@@ -1259,5 +1259,5 @@ CIcon.displayName = 'CIcon';
 
 // export { CIconWarning as CIcon, CIconWarning as CIconRaw }
 
-export default CIcon;
+export { CIcon as default };
 //# sourceMappingURL=index.es.js.map
