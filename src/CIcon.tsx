@@ -17,7 +17,7 @@ export interface CIconProps extends HTMLAttributes<SVGSVGElement> {
   /**
    * Use for replacing default CIcon component classes. Prop is overriding the 'size' prop.
    */
-  customClassName?: string | object | string[] // eslint-disable-line @typescript-eslint/ban-types
+  customClassName?: string | string[] // eslint-disable-line @typescript-eslint/ban-types
   /**
    * Name of the icon placed in React object or SVG content.
    */
@@ -98,20 +98,18 @@ export const CIcon = forwardRef<SVGSVGElement, CIconProps>(
 
     useMemo(() => setChange(change + 1), [_icon, JSON.stringify(_icon)])
 
-    const iconName = useMemo(
-      () =>
-        _icon && typeof _icon === 'string' && _icon.includes('-') ? toCamelCase(_icon) : _icon,
-      [change],
-    )
-
     const titleCode = title ? `<title>${title}</title>` : ''
 
     const code = useMemo(() => {
+      const iconName =
+        _icon && typeof _icon === 'string' && _icon.includes('-') ? toCamelCase(_icon) : _icon
+
       if (Array.isArray(_icon)) {
         return _icon
       }
+
       if (typeof _icon === 'string' && React['icons']) {
-        return React['icons'][iconName]
+        return React['icons'][iconName as string]
       }
     }, [change])
 
@@ -126,8 +124,6 @@ export const CIcon = forwardRef<SVGSVGElement, CIconProps>(
     const viewBox = (() => {
       return rest['viewBox'] || `0 0 ${scale}`
     })()
-
-    // render
 
     const _className = customClassName
       ? classNames(customClassName)
