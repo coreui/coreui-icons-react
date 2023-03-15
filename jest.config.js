@@ -12,7 +12,6 @@ module.exports = {
     '\\.(css|scss)$': '<rootDir>/test/styleMock.js',
   },
   preset: 'ts-jest',
-  setupFiles: ['jest-canvas-mock'],
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['dist/'],
 }
