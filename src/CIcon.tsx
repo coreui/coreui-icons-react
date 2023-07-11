@@ -3,7 +3,7 @@ import React, { HTMLAttributes, forwardRef, useState, useMemo } from 'react'
 import classNames from 'classnames'
 import './CIcon.css'
 
-export interface CIconProps extends HTMLAttributes<SVGSVGElement> {
+export interface CIconProps extends Omit<HTMLAttributes<SVGSVGElement>, 'content'> {
   /**
    * A string of all className you want applied to the component.
    */
@@ -17,7 +17,7 @@ export interface CIconProps extends HTMLAttributes<SVGSVGElement> {
   /**
    * Use for replacing default CIcon component classes. Prop is overriding the 'size' prop.
    */
-  customClassName?: string | string[] // eslint-disable-line @typescript-eslint/ban-types
+  customClassName?: string | string[]
   /**
    * Name of the icon placed in React object or SVG content.
    */
@@ -136,30 +136,37 @@ export const CIcon = forwardRef<SVGSVGElement, CIconProps>(
           className,
         )
 
-    return use ? (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className={_className}
-        {...(height && { height: height })}
-        {...(width && { width: width })}
-        role="img"
-        {...rest}
-        ref={ref}
-      >
-        <use href={use}></use>
-      </svg>
-    ) : (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox={viewBox}
-        className={_className}
-        {...(height && { height: height })}
-        {...(width && { width: width })}
-        role="img"
-        dangerouslySetInnerHTML={{ __html: titleCode + iconCode }}
-        {...rest}
-        ref={ref}
-      />
+    return (
+      <>
+        {use ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className={_className}
+            {...(height && { height: height })}
+            {...(width && { width: width })}
+            role="img"
+            aria-hidden="true"
+            {...rest}
+            ref={ref}
+          >
+            <use href={use}></use>
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox={viewBox}
+            className={_className}
+            {...(height && { height: height })}
+            {...(width && { width: width })}
+            role="img"
+            aria-hidden="true"
+            dangerouslySetInnerHTML={{ __html: titleCode + iconCode }}
+            {...rest}
+            ref={ref}
+          />
+        )}
+        {title && <span className="visually-hidden">{title}</span>}
+      </>
     )
   },
 )
