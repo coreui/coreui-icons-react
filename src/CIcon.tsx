@@ -54,6 +54,10 @@ export interface CIconProps extends Omit<HTMLAttributes<SVGSVGElement>, 'content
    */
   use?: string
   /**
+   * The viewBox attribute defines the position and dimension of an SVG viewport.
+   */
+  viewBox?: string
+  /**
    * Title tag content.
    */
   title?: string
@@ -108,8 +112,8 @@ export const CIcon = forwardRef<SVGSVGElement, CIconProps>(
         return _icon
       }
 
-      if (typeof _icon === 'string' && React['icons']) {
-        return React['icons'][iconName as string]
+      if (typeof _icon === 'string' && (React as { [key: string]: any })['icons']) {
+        return (React as { [key: string]: any })[iconName as string]
       }
     }, [change])
 
@@ -193,8 +197,9 @@ CIcon.propTypes = {
     '8xl',
     '9xl',
   ]),
-  title: PropTypes.any,
-  use: PropTypes.any,
+  title: PropTypes.string,
+  use: PropTypes.string,
+  viewBox: PropTypes.string,
   width: PropTypes.number,
 }
 
